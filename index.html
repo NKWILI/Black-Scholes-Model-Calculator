@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Black-Scholes Model for Call Option</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculateur de l'Option d'Achat (Black-Scholes)</h1>
+        
+        <div class="form">
+
+             <!-- Currency Selection Dropdown -->
+          <label for="currency">Sélectionner la Devise :</label>
+          <select id="currency">
+            <option value="€">Euro (€)</option>
+            <option value="$">Dollar ($)</option>
+            <option value="£">Livre Sterling (£)</option>
+            <option value="₹">Rupee (₹)</option>
+          </select>
+          <label for="current-price">Prix Actuel de l'Action (S₀) :</label>
+          <input type="number" id="current-price" placeholder="Ex: 100" title="Le prix de l'action aujourd'hui">
+    
+          <label for="strike-price">Prix d'Exercice (K) :</label>
+          <input type="number" id="strike-price" placeholder="Ex: 100" title="Le prix auquel vous pouvez acheter l'action">
+    
+          <label for="interest-rate">Taux d'Intérêt Sans Risque (r) :</label>
+          <input type="number" id="interest-rate" step="0.01" placeholder="Ex: 0.05" title="Le taux d'intérêt sans risque (souvent utilisé comme un taux de référence)">
+    
+          <label for="time-to-maturity">Temps à Maturité (en années) :</label>
+          <input type="number" id="time-to-maturity" step="0.01" placeholder="Ex: 0.25 (pour 3 mois)" title="La durée avant l'expiration de l'option, en années">
+    
+          <label for="volatility">Volatilité (σ) :</label>
+          <input type="number" id="volatility" step="0.01" placeholder="Ex: 0.2" title="La volatilité estimée de l'action, exprimée en pourcentage (0.2 = 20%)">
+    
+         
+    
+          <button id="calculate-btn">Calculer le Prix de l'Option</button>
+        </div>
+        
+        <div class="result">
+          <h2>Prix de l'Option d'Achat :</h2>
+          <p id="option-price">0 </p>
+        </div>
+        
+        <footer>
+          <p>
+            Source: <a href="https://www.linkedin.com/posts/clotilde-djuikem-8186901a0_maths-et-la-finance-activity-7259097055157997569-19Ow?utm_source=share&utm_medium=member_desktop" target="_blank">Clotilde Djuikem on LinkedIn</a>
+          </p>
+          <p>Abonnez-vous à <a href="https://www.linkedin.com/in/clotilde-djuikem-8186901a0/" target="_blank">Clotilde Djuikem</a> sur LinkedIn et <a href="https://www.youtube.com/channel/UCCyYsZP2S1RZ5rI78ekBj-A" target="_blank">Tioh Academy</a> sur YouTube pour plus de contenus sur les mathématiques !</p>
+        </footer>
+      </div>
+    
+      <script src="script.js"></script>
+    
+    </body>
+    </html>
+
